@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="OnionArchProductManagement.Application/OnionArchProductManagement.Application.csproj" />
+  <Project Path="OnionArchProductManagement.Domain/OnionArchProductManagement.Domain.csproj" />
+  <Project Path="OnionArchProductManagement.Persistence/OnionArchProductManagement.Persistence.csproj" />
+  <Project Path="OnionArchProductManagement.WebApi/OnionArchProductManagement.WebApi.csproj" Id="09f2ee7c-39e9-4e38-bcae-d8ce39bddf87" />
+</Solution>
