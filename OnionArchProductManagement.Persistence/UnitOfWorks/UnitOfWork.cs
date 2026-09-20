@@ -11,13 +11,18 @@ namespace OnionArchProductManagement.Persistence.UnitOfWorks
         private readonly AppDbContext _context;
         private readonly IProductRepository _productRepository;
 
-        public UnitOfWork(AppDbContext context, IProductRepository productRepository)
+        private readonly ICategoryRepository _categoryRepository;
+
+        public UnitOfWork(AppDbContext context, IProductRepository productRepository, ICategoryRepository categoryRepository)
         {
             _context = context;
             _productRepository = productRepository;
+            _categoryRepository = categoryRepository;
         }
 
         public IProductRepository Products => _productRepository;
+
+        public ICategoryRepository Categories => _categoryRepository;
 
         public async ValueTask DisposeAsync()
         {

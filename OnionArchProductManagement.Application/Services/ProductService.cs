@@ -50,5 +50,16 @@ namespace OnionArchProductManagement.Application.Services
 
             return _mapper.Map<ProductDto>(product);
         }
+
+        public async Task<List<GetProductWithDetailDto>> GetProductWithDetailAsync()
+        {
+            var products = await _unitOfWork.Products.GetCategoryWithDetailAsync();
+            if(products is null)
+            {
+                throw new ArgumentException();
+            }
+            var productsDto=_mapper.Map<List<GetProductWithDetailDto>>(products);
+            return productsDto;
+        }
     }
 }

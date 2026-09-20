@@ -25,6 +25,7 @@ namespace OnionArchProductManagement.Application.Extensions
 
             // Servisler ve Service Unit of Work
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IServiceUnitOfWork, ServiceUnitOfWork>();
         }
     }

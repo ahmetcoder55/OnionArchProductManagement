@@ -22,6 +22,13 @@ namespace OnionArchProductManagement.WebApi.Controllers
             var products = await _serviceUnitOfWork.ProductService.GetAllProductsAsync();
             return Ok(products);
         }
+        [HttpGet("get-details")]
+        public async Task<IActionResult> GetAllWithDetail()
+        {
+            return Ok(
+                await _serviceUnitOfWork.ProductService.GetProductWithDetailAsync()
+                );
+        }
 
         [HttpPost("create-product")]
         public async Task<IActionResult> Create([FromBody] CreateProductDto createDto)

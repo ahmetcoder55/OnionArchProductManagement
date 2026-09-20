@@ -22,6 +22,7 @@ namespace OnionArchProductManagement.Persistence.Extensions
             });
 
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IUnitOfWork,UnitOfWork>();
             
         }

@@ -13,6 +13,9 @@ namespace OnionArchProductManagement.Application.Mappings
         {
             CreateMap<Product, ProductDto>().ReverseMap();
             CreateMap<Product, CreateProductDto>().ReverseMap();
+            CreateMap<Category,CategoryDto>().ReverseMap();
+            CreateMap<Category, CreateCategoryDto>().ReverseMap();
+            CreateMap<Product, GetProductWithDetailDto>().ReverseMap();
         }
     }
 }
